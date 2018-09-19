@@ -1,40 +1,57 @@
 ========================================================================
     CONSOLE APPLICATION : Lab1 Project Overview
 ========================================================================
+Ancy Pei Lab 1
 
-AppWizard has created this Lab1 application for you.
-
-This file contains a summary of what you will find in each of the files that
-make up your Lab1 application.
-
-
-Lab1.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
-
-Lab1.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
-
-Lab1.cpp
-    This is the main application source file.
+Errors and Warnings: this program did not run into any error or warning.
 
 /////////////////////////////////////////////////////////////////////////////
-Other standard files:
 
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named Lab1.pch and a precompiled types file named StdAfx.obj.
+Trials: 
 
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
+#1
+H:\yupei332\Lab1\Lab1\Debug>Lab1.exe input_file.txt
+these
+all
+are
+strings
+7string
+str4ing
+string2
+more
+strings
+0
+1
+2
+3
+5
+7
+11
+13
+17
+19
 
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
+Analysis: this is correct behavior. It also returned success when the command echo %errorlevel% was run. 
+
+#2
+H:\yupei332\Lab1\Lab1\Debug>Lab1.exe
+Wrong number of command line arguments
+usage: Lab1.exe < input_file_name >
+Analysis: only one command line was input while the correct number of command lines is 2.
+(This is correct behavior, showing "Wrong number of command line arguments")
+
+#3
+H:\yupei332\Lab1\Lab1\Debug>Lab1.exe input_file.txt abc.txt
+Wrong number of command line arguments
+usage: Lab1.exe < input_file_name >
+Analysis: three command lines were input while the correct number of command lines is 2.
+(This is correct behavior, showing "Wrong number of command line arguments")
+
+#4 
+H:\yupei332\Lab1\Lab1\Debug>Lab1.exe abc.txt
+Cannot Open File
+Analysis: even though the number of command lines is correct, the file abc.txt cannot be found
+(This is correct behavior because the second command line does not exist)
+
 
 /////////////////////////////////////////////////////////////////////////////
